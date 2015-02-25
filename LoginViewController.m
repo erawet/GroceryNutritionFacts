@@ -40,6 +40,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onLoginPress:(UIButton *)sender {
+    
+    [PFUser logInWithUsernameInBackground:self.emailText.text password:self.passwordText.text block:^(PFUser *user, NSError *error) {
+        
+        if (user) {
+            [self performSegueWithIdentifier:@"goToTabBar" sender:self];
+        } else{
+            [self alertMessage:@"Invalied Password"];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        
+    }];
+    
+}
+
+-(void)alertMessage:(NSString*)message{
+    
+    UIAlertView *alertmessage=[[UIAlertView alloc]initWithTitle:@"Error!!" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alertmessage show];
+}
+
+
 - (void)viewWillAppear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];

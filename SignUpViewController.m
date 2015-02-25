@@ -40,7 +40,7 @@
 - (IBAction)onSignUpPress:(UIButton *)sender {
     
     PFUser *newUser=[PFUser user];
-    newUser.username=self.name.text;
+    newUser.username=self.email.text;
     newUser.email=self.email.text;
     
     if ([self.pwd.text isEqualToString:self.confirmPwd.text]) {
@@ -48,15 +48,16 @@
         
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
-               // [self saveUserDataLocally];
-                [self performSegueWithIdentifier:@"goToTabBar" sender:self];
+                // [self saveUserDataLocally];
+                [self performSegueWithIdentifier:@"fromSignUp" sender:self];
             } else {
-               
+                
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
         }];
     } else{
-       // [self alertMessage:@"Password does not match"];
+        [self alertMessage:@"Password does not match!! Try again.." errorTitle:@"Error !!"];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
     
     
@@ -80,6 +81,10 @@
     
 }
 
-
-
+-(void)alertMessage:(NSString*)message errorTitle:(NSString*)errorTitle{
+    
+    UIAlertView *alertmessage=[[UIAlertView alloc]initWithTitle:errorTitle message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alertmessage show];
+    
+}
 @end
