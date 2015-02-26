@@ -49,7 +49,7 @@
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
                 // [self saveUserDataLocally];
-                [self performSegueWithIdentifier:@"fromSignUp" sender:self];
+                [self performSegueWithIdentifier:@"goToTabBar" sender:self];
             } else {
                 
                 [self dismissViewControllerAnimated:YES completion:nil];
