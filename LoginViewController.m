@@ -42,6 +42,9 @@
 
 - (IBAction)onLoginPress:(UIButton *)sender {
     
+    self.emailText.text=@"a";
+    self.passwordText.text=@"a";
+    
     [PFUser logInWithUsernameInBackground:self.emailText.text password:self.passwordText.text block:^(PFUser *user, NSError *error) {
         
         if (user) {

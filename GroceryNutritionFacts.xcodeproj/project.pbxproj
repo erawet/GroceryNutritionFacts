@@ -94,25 +94,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037F47751A93003700FADFE9 /* CoreVideo.framework in Frameworks */,
+				037F47711A93001100FADFE9 /* AVFoundation.framework in Frameworks */,
+				037F47791A93007900FADFE9 /* libiconv.dylib in Frameworks */,
+				037F47A11A9829E300FADFE9 /* SystemConfiguration.framework in Frameworks */,
+				037F47771A93004E00FADFE9 /* QuartzCore.framework in Frameworks */,
+				037F47731A93002500FADFE9 /* CoreMedia.framework in Frameworks */,
+				037F47931A98296600FADFE9 /* AudioToolbox.framework in Frameworks */,
 				037F47AE1A982D7D00FADFE9 /* Bolts.framework in Frameworks */,
 				037F47A51A982A0F00FADFE9 /* libsqlite3.dylib in Frameworks */,
 				037F47B11A982D7D00FADFE9 /* ParseFacebookUtils.framework in Frameworks */,
 				037F47A31A9829F800FADFE9 /* libz.dylib in Frameworks */,
 				037F47B01A982D7D00FADFE9 /* ParseCrashReporting.framework in Frameworks */,
-				037F47A11A9829E300FADFE9 /* SystemConfiguration.framework in Frameworks */,
 				037F479D1A9829C100FADFE9 /* Security.framework in Frameworks */,
-				037F47771A93004E00FADFE9 /* QuartzCore.framework in Frameworks */,
 				037F47AF1A982D7D00FADFE9 /* Parse.framework in Frameworks */,
 				037F479B1A9829A500FADFE9 /* MobileCoreServices.framework in Frameworks */,
 				037F47B21A982D7D00FADFE9 /* ParseUI.framework in Frameworks */,
 				037F47991A98299800FADFE9 /* CoreLocation.framework in Frameworks */,
 				037F47971A98298D00FADFE9 /* CoreGraphics.framework in Frameworks */,
 				037F47951A98297800FADFE9 /* CFNetwork.framework in Frameworks */,
-				037F47931A98296600FADFE9 /* AudioToolbox.framework in Frameworks */,
-				037F47791A93007900FADFE9 /* libiconv.dylib in Frameworks */,
-				037F47751A93003700FADFE9 /* CoreVideo.framework in Frameworks */,
-				037F47731A93002500FADFE9 /* CoreMedia.framework in Frameworks */,
-				037F47711A93001100FADFE9 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
