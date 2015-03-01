@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZBarSDK.h"
-
-@interface ScannerViewController : UIViewController <UIImagePickerControllerDelegate,ZBarReaderDelegate>
 
 
+@interface ScannerViewController : UIViewController
 
 
 @end

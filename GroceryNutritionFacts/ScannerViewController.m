@@ -8,6 +8,7 @@
 
 #import "ScannerViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "ResultViewController.h"
 
 @import AVFoundation;
 
@@ -15,9 +16,11 @@
 @property (nonatomic, strong) AVMetadataMachineReadableCodeObject *metadataObject;
 @property (nonatomic, strong) UIBezierPath *cornersPath;
 @property (nonatomic, strong) UIBezierPath *boundingBoxPath;
+
 @end
 
 @implementation Barcode
+    
 @end
 
 
@@ -37,6 +40,8 @@
     
     UIView *_highlightView;
     UILabel *_label;
+    NSString *detectionStringValue;
+    NSString *lastBarcodeValue;
     
 }
 #pragma mark -
@@ -111,6 +116,17 @@
         if (detectionString != nil)
         {
             _label.text = detectionString;
+            [self performSegueWithIdentifier:@"fromScanView" sender:self];
+            
+            
+            if([detectionString isEqualToString:lastBarcodeValue])
+            {
+                return;
+            }
+            
+            lastBarcodeValue = detectionString;
+            
+            
             break;
         }
         else
@@ -119,5 +135,24 @@
     
     _highlightView.frame = highlightViewRect;
 }
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"fromScanView"]) {
+//        UINavigationController *navController = (UINavigationController*)segue.destinationViewController;
+//        CodeViewController *controller = (CodeViewController*)navController.topViewController;
+//        controller.code = mCode;
+//    }
+//}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"fromScanView"])
+    {
+        ResultViewController *viewController = segue.destinationViewController;
+    viewController.barcodeValue = _label.text;
+    }
+}
+
+
 
 @end
