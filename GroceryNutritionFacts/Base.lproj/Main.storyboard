@@ -402,9 +402,15 @@
                                     <navigationItem title="Nutrition Facts" id="xRF-tf-142">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bij-2T-yA9">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onCancelPress:" destination="b2F-cN-jES" id="aEI-oS-V0s"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="+ My list" id="i5P-D8-k8B">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onAddItemPress:" destination="b2F-cN-jES" id="fx0-tD-zrj"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1453,7 +1459,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INGREDIENTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJg-Ov-YZV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INGREDIENTS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJg-Ov-YZV">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="72" id="fGN-0X-JoM"/>
@@ -1475,13 +1481,15 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJD-ky-Txw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJD-ky-Txw">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="208" id="EAr-VT-WZa"/>
-                                    <constraint firstAttribute="height" constant="45" id="JoO-PN-E2q"/>
+                                    <constraint firstAttribute="height" constant="45" id="JoO-PN-E2q">
+                                        <variation key="widthClass=compact" constant="59"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -1698,7 +1706,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdx-pO-s2R">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="23" id="LKq-Qd-Otf"/>
+                                    <constraint firstAttribute="width" constant="23" id="LKq-Qd-Otf">
+                                        <variation key="widthClass=compact" constant="53"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="21" id="inn-47-ivC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1720,7 +1730,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liP-rk-O8U">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="23" id="LYU-Vp-TJe"/>
+                                    <constraint firstAttribute="width" constant="23" id="LYU-Vp-TJe">
+                                        <variation key="widthClass=compact" constant="44"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="21" id="oeC-6y-j33"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1743,7 +1755,9 @@
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Gx2-pv-Uei"/>
-                                    <constraint firstAttribute="width" constant="23" id="pah-0r-MTS"/>
+                                    <constraint firstAttribute="width" constant="23" id="pah-0r-MTS">
+                                        <variation key="widthClass=compact" constant="37"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1764,7 +1778,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRJ-8m-P3N">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="23" id="Orf-ee-ZCx"/>
+                                    <constraint firstAttribute="width" constant="23" id="Orf-ee-ZCx">
+                                        <variation key="widthClass=compact" constant="41"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="21" id="T2V-OD-4vi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1786,7 +1802,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCS-QC-1IW">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="23" id="U8O-TT-Mjs"/>
+                                    <constraint firstAttribute="width" constant="23" id="U8O-TT-Mjs">
+                                        <variation key="widthClass=compact" constant="47"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="21" id="jwh-In-uE9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1830,7 +1848,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mf7-dU-aha">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="23" id="BMl-zl-9Rc"/>
+                                    <constraint firstAttribute="width" constant="23" id="BMl-zl-9Rc">
+                                        <variation key="widthClass=compact" constant="39"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="21" id="SC2-NC-4rH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2086,7 +2106,9 @@
                             <constraint firstItem="fdx-pO-s2R" firstAttribute="leading" secondItem="aZT-rL-sjX" secondAttribute="trailing" constant="26" id="3bk-mS-auS"/>
                             <constraint firstItem="ib1-S0-mhV" firstAttribute="top" secondItem="A8y-d0-f1N" secondAttribute="bottom" id="3cU-Kq-dsS"/>
                             <constraint firstItem="5Y3-31-QoG" firstAttribute="leading" secondItem="zZ1-wn-DiR" secondAttribute="trailing" constant="60" id="3fF-er-ED8"/>
-                            <constraint firstItem="5Rj-Mz-R1M" firstAttribute="leading" secondItem="IOq-xE-gdb" secondAttribute="trailing" constant="107" id="4Gt-4S-Fkc"/>
+                            <constraint firstItem="5Rj-Mz-R1M" firstAttribute="leading" secondItem="IOq-xE-gdb" secondAttribute="trailing" constant="107" id="4Gt-4S-Fkc">
+                                <variation key="widthClass=compact" constant="93"/>
+                            </constraint>
                             <constraint firstItem="5Rj-Mz-R1M" firstAttribute="top" secondItem="22M-cS-cyq" secondAttribute="bottom" constant="18" id="5Hj-YA-moU"/>
                             <constraint firstItem="zZ1-wn-DiR" firstAttribute="leading" secondItem="OXw-Xm-dur" secondAttribute="trailing" constant="32" id="5Q1-KJ-KVU"/>
                             <constraint firstItem="ib1-S0-mhV" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="24" id="6Gj-UB-m9l"/>
@@ -2112,7 +2134,9 @@
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstItem="RJg-Ov-YZV" firstAttribute="top" secondItem="T1t-VC-3ry" secondAttribute="bottom" constant="29" id="DJv-Gg-Dm7"/>
-                            <constraint firstItem="ExY-dC-2VQ" firstAttribute="leading" secondItem="liP-rk-O8U" secondAttribute="trailing" constant="85" id="Dao-S0-yxT"/>
+                            <constraint firstItem="ExY-dC-2VQ" firstAttribute="leading" secondItem="liP-rk-O8U" secondAttribute="trailing" constant="85" id="Dao-S0-yxT">
+                                <variation key="widthClass=compact" constant="64"/>
+                            </constraint>
                             <constraint firstItem="XDs-lg-mvW" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="24" id="E4H-xr-439"/>
                             <constraint firstItem="UhJ-hU-90a" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="37" id="EdJ-pI-Lfn">
                                 <variation key="widthClass=compact" constant="24"/>
@@ -2121,7 +2145,9 @@
                             <constraint firstItem="kKB-Ml-zcd" firstAttribute="top" secondItem="z2h-Dx-v07" secondAttribute="bottom" constant="18" id="F3t-J2-LIE"/>
                             <constraint firstItem="JsX-LD-X9y" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="24" id="FJh-gy-Ur2"/>
                             <constraint firstItem="Uzf-n0-pOJ" firstAttribute="leading" secondItem="OXw-Xm-dur" secondAttribute="trailing" constant="13" id="FP5-8l-K4f"/>
-                            <constraint firstItem="1f7-dH-KkW" firstAttribute="leading" secondItem="fdx-pO-s2R" secondAttribute="trailing" constant="166" id="FoF-ZQ-nfl"/>
+                            <constraint firstItem="1f7-dH-KkW" firstAttribute="leading" secondItem="fdx-pO-s2R" secondAttribute="trailing" constant="166" id="FoF-ZQ-nfl">
+                                <variation key="widthClass=compact" constant="136"/>
+                            </constraint>
                             <constraint firstItem="n5H-pA-bXj" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="44" id="FoM-RV-zdO"/>
                             <constraint firstItem="vsq-9I-FlR" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="44" id="HXR-L2-vRt"/>
                             <constraint firstItem="XDs-lg-mvW" firstAttribute="top" secondItem="n5H-pA-bXj" secondAttribute="bottom" constant="19" id="IPa-zc-f0c"/>
@@ -2144,7 +2170,9 @@
                             <constraint firstItem="8qF-AX-ucO" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="24" id="NA3-wd-g6C"/>
                             <constraint firstItem="f0o-1z-kvN" firstAttribute="top" secondItem="NUE-Zt-T9T" secondAttribute="bottom" constant="6" id="NP3-gK-LUO"/>
                             <constraint firstItem="VCS-QC-1IW" firstAttribute="leading" secondItem="XDs-lg-mvW" secondAttribute="trailing" constant="23" id="Ndi-3P-yRE"/>
-                            <constraint firstItem="22M-cS-cyq" firstAttribute="leading" secondItem="fdx-pO-s2R" secondAttribute="trailing" constant="146" id="NtV-xT-fQm"/>
+                            <constraint firstItem="22M-cS-cyq" firstAttribute="leading" secondItem="fdx-pO-s2R" secondAttribute="trailing" constant="146" id="NtV-xT-fQm">
+                                <variation key="widthClass=compact" constant="116"/>
+                            </constraint>
                             <constraint firstItem="Hc9-dD-7gD" firstAttribute="top" secondItem="JsX-LD-X9y" secondAttribute="bottom" id="OR0-ec-oP3"/>
                             <constraint firstItem="rm8-62-a3B" firstAttribute="top" secondItem="1f7-dH-KkW" secondAttribute="bottom" constant="17" id="Ohp-MC-tbV"/>
                             <constraint firstItem="3Ww-gG-C09" firstAttribute="top" secondItem="cWR-6q-e21" secondAttribute="topMargin" constant="20" id="OvO-qO-uSq"/>
@@ -2154,8 +2182,12 @@
                             <constraint firstItem="u3c-jG-gqF" firstAttribute="top" secondItem="JFw-4b-rQg" secondAttribute="bottom" id="Ppm-Uc-3Yf"/>
                             <constraint firstItem="OXw-Xm-dur" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="24" id="Q3b-Np-f5p"/>
                             <constraint firstItem="L4P-CC-y7K" firstAttribute="top" secondItem="JsX-LD-X9y" secondAttribute="bottom" constant="20" id="RKJ-er-SdI"/>
-                            <constraint firstItem="rm8-62-a3B" firstAttribute="leading" secondItem="IOq-xE-gdb" secondAttribute="trailing" constant="127" id="RrJ-5h-J8g"/>
-                            <constraint firstItem="0cC-n1-Qpg" firstAttribute="leading" secondItem="Mf7-dU-aha" secondAttribute="trailing" constant="132" id="STw-EB-35O"/>
+                            <constraint firstItem="rm8-62-a3B" firstAttribute="leading" secondItem="IOq-xE-gdb" secondAttribute="trailing" constant="127" id="RrJ-5h-J8g">
+                                <variation key="widthClass=compact" constant="113"/>
+                            </constraint>
+                            <constraint firstItem="0cC-n1-Qpg" firstAttribute="leading" secondItem="Mf7-dU-aha" secondAttribute="trailing" constant="132" id="STw-EB-35O">
+                                <variation key="widthClass=compact" constant="116"/>
+                            </constraint>
                             <constraint firstItem="T4v-ar-aV5" firstAttribute="leading" secondItem="JFw-4b-rQg" secondAttribute="trailing" constant="24" id="TO5-uA-ysb"/>
                             <constraint firstItem="CB0-5h-jyz" firstAttribute="top" secondItem="Uzf-n0-pOJ" secondAttribute="bottom" constant="18" id="ThN-0a-S49"/>
                             <constraint firstItem="kw9-sD-Adf" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="24" id="Tz3-MK-cck"/>
@@ -2179,7 +2211,9 @@
                             <constraint firstItem="VCS-QC-1IW" firstAttribute="top" secondItem="n5H-pA-bXj" secondAttribute="bottom" constant="19" id="dIZ-Zp-6nw"/>
                             <constraint firstItem="NUE-Zt-T9T" firstAttribute="top" secondItem="XdP-Nh-OP4" secondAttribute="bottom" constant="6" id="eBX-TU-kWP"/>
                             <constraint firstItem="pE0-d9-nhL" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="44" id="eOf-z0-efK"/>
-                            <constraint firstItem="Ejb-08-Rny" firstAttribute="leading" secondItem="Mf7-dU-aha" secondAttribute="trailing" constant="152" id="fGy-Qi-gji"/>
+                            <constraint firstItem="Ejb-08-Rny" firstAttribute="leading" secondItem="Mf7-dU-aha" secondAttribute="trailing" constant="152" id="fGy-Qi-gji">
+                                <variation key="widthClass=compact" constant="136"/>
+                            </constraint>
                             <constraint firstItem="vsq-9I-FlR" firstAttribute="top" secondItem="JsX-LD-X9y" secondAttribute="bottom" constant="20" id="fap-jE-V6J"/>
                             <constraint firstItem="eEa-ER-ZBD" firstAttribute="leading" secondItem="JEg-Bc-NVX" secondAttribute="trailing" constant="62" id="gi0-BP-vhw"/>
                             <constraint firstItem="eFZ-Hs-Z0U" firstAttribute="top" secondItem="f0o-1z-kvN" secondAttribute="bottom" constant="3" id="gt7-t0-FFc"/>
@@ -2191,7 +2225,9 @@
                             <constraint firstItem="u3c-jG-gqF" firstAttribute="leading" secondItem="cWR-6q-e21" secondAttribute="leadingMargin" constant="24" id="jYY-RS-eSA"/>
                             <constraint firstItem="Mf7-dU-aha" firstAttribute="leading" secondItem="Y9Y-qp-5LD" secondAttribute="trailing" constant="6" id="jnw-cf-PSG"/>
                             <constraint firstItem="n5H-pA-bXj" firstAttribute="top" secondItem="ExY-dC-2VQ" secondAttribute="bottom" constant="19" id="kys-88-zUb"/>
-                            <constraint firstItem="Zrn-bP-IA7" firstAttribute="leading" secondItem="liP-rk-O8U" secondAttribute="trailing" constant="105" id="l0t-9j-zMU"/>
+                            <constraint firstItem="Zrn-bP-IA7" firstAttribute="leading" secondItem="liP-rk-O8U" secondAttribute="trailing" constant="105" id="l0t-9j-zMU">
+                                <variation key="widthClass=compact" constant="84"/>
+                            </constraint>
                             <constraint firstItem="qu5-Rx-YXn" firstAttribute="top" secondItem="fdx-pO-s2R" secondAttribute="bottom" constant="18" id="mIk-DP-7Y9"/>
                             <constraint firstItem="Uzf-n0-pOJ" firstAttribute="top" secondItem="VCS-QC-1IW" secondAttribute="bottom" constant="4" id="mil-4T-Ex4"/>
                             <constraint firstItem="Ejb-08-Rny" firstAttribute="top" secondItem="986-hh-JL1" secondAttribute="bottom" constant="19" id="mjI-S3-k8d"/>
@@ -2699,10 +2735,36 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="nf_calcium_dv" destination="Uf8-f5-zEA" id="XTp-In-RTS"/>
+                        <outlet property="nf_calories" destination="kTF-Xi-xy7" id="IGS-5e-Aae"/>
+                        <outlet property="nf_calories_from_fat" destination="09X-aj-uoT" id="1fu-Xc-PLs"/>
+                        <outlet property="nf_cholesterol" destination="Mf7-dU-aha" id="KXp-IV-Nn0"/>
+                        <outlet property="nf_cholesterolDV" destination="0cC-n1-Qpg" id="WLm-SE-ltW"/>
+                        <outlet property="nf_dietary_fiber" destination="IOq-xE-gdb" id="sDz-2C-ohC"/>
+                        <outlet property="nf_dietary_fiberDV" destination="5Rj-Mz-R1M" id="gu9-qa-prH"/>
+                        <outlet property="nf_ingredient_statement" destination="LJD-ky-Txw" id="0l2-am-Elz"/>
+                        <outlet property="nf_iron_dv" destination="A8y-d0-f1N" id="igW-jv-TBY"/>
+                        <outlet property="nf_protein" destination="VCS-QC-1IW" id="e3d-Co-wVg"/>
+                        <outlet property="nf_saturated_fat" destination="L4P-CC-y7K" id="qlo-6m-tkI"/>
+                        <outlet property="nf_saturated_fatDV" destination="1tW-mJ-Ke9" id="rrW-9q-MIC"/>
+                        <outlet property="nf_serving_size_qty" destination="V3h-bR-7Jj" id="5WA-xL-M2w"/>
+                        <outlet property="nf_servings_per_container" destination="VVf-4V-Nsk" id="kTv-vW-gPT"/>
+                        <outlet property="nf_sodium" destination="fdx-pO-s2R" id="TI2-dA-QXh"/>
+                        <outlet property="nf_sodiumDV" destination="22M-cS-cyq" id="O8x-nm-UZb"/>
+                        <outlet property="nf_sugars" destination="fRJ-8m-P3N" id="rj5-Kw-Tfi"/>
+                        <outlet property="nf_total_carbohydrate" destination="liP-rk-O8U" id="SpE-VT-Po7"/>
+                        <outlet property="nf_total_carbohydrateDV" destination="ExY-dC-2VQ" id="2VA-CJ-Wgd"/>
+                        <outlet property="nf_total_fat" destination="zeu-a0-IaF" id="94e-r0-MBN"/>
+                        <outlet property="nf_total_fatDV" destination="LjP-zA-y6d" id="coX-i6-bnb"/>
+                        <outlet property="nf_trans_fatty_acid" destination="T4v-ar-aV5" id="gSi-lw-63U"/>
+                        <outlet property="nf_vitamin_a_dv" destination="Uzf-n0-pOJ" id="LgN-z4-LxC"/>
+                        <outlet property="nf_vitamin_c_dv" destination="3XG-LX-Sec" id="Bya-tF-JAI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaP-VM-pBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="47"/>
+            <point key="canvasLocation" x="2835" y="28"/>
         </scene>
         <!--My List-->
         <scene sceneID="wg7-f3-ORb">

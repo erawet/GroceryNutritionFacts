@@ -45,6 +45,13 @@
     
 }
 #pragma mark -
+//-(void)viewDidDisappear:(BOOL)animated{
+//    NSLog(@"AA");
+//}
+//
+//-(void)viewWillDisappear:(BOOL)animated{
+//     NSLog(@"BB");
+//}
 
 - (void)viewDidLoad
 {
@@ -146,8 +153,10 @@
 {
     if ([segue.identifier isEqualToString:@"fromScanView"])
     {
+       
         ResultViewController *viewController = segue.destinationViewController;
-    viewController.barcodeValue = lastBarcodeValue;
+        viewController.barcodeValue = lastBarcodeValue;
+        
     }
 }
 
