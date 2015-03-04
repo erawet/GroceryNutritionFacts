@@ -12,8 +12,8 @@
 
 
 // app constants
-NSString * const APP_ID                   = @"Nutritionix App Id";
-NSString * const APP_KEY                  = @"Nutritionix App Key";
+NSString * const APP_ID                   = @"Nutritionix App Id";  //Nutritionix App Id
+NSString * const APP_KEY                  = @"Nutritionix App Key"; //Nutritionix App Key
 NSString * const APP_API_URL              = @"Nutritionix API Url";
 
 NSString * const LIB_VERSION              = @"1.02";

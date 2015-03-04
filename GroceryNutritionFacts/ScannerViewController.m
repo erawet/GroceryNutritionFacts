@@ -116,8 +116,6 @@
         if (detectionString != nil)
         {
             _label.text = detectionString;
-            [self performSegueWithIdentifier:@"fromScanView" sender:self];
-            
             
             if([detectionString isEqualToString:lastBarcodeValue])
             {
@@ -125,7 +123,7 @@
             }
             
             lastBarcodeValue = detectionString;
-            
+            [self performSegueWithIdentifier:@"fromScanView" sender:self];
             
             break;
         }
@@ -149,7 +147,7 @@
     if ([segue.identifier isEqualToString:@"fromScanView"])
     {
         ResultViewController *viewController = segue.destinationViewController;
-    viewController.barcodeValue = _label.text;
+    viewController.barcodeValue = lastBarcodeValue;
     }
 }
 

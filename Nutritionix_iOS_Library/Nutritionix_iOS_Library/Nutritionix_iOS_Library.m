@@ -33,9 +33,15 @@ NSString *appKey;
 {
  if(apiIUrl == nil)
  {
+   /*
   apiIUrl = [Nutritionix_iOS_Library readPlist:APP_API_URL];
   appId   = [Nutritionix_iOS_Library readPlist:APP_ID];
   appKey  = [Nutritionix_iOS_Library readPlist:APP_KEY];
+  */
+     apiIUrl = @"https://api.nutritionix.com/v1_1/";
+     appId   = @"f028f8a9";
+     appKey  = @"2aa3705c7b61c9810518c37d3332710c";
+     
   
   NSLog(@"appId:  %@, appKey:  %@", appId, appKey);
  }
@@ -53,7 +59,6 @@ NSString *appKey;
  
  NSLog(@"apiUrl:  %@, appId:  %@, appKey:  %@", apiIUrl, appId, appKey);
 }
-
 
 /*
  * call Nutritionix API - using completion block (asynch call structure, preferred approach, but requires notification to service layer / UI)
@@ -126,15 +131,18 @@ NSString *appKey;
   response = [NSJSONSerialization JSONObjectWithData: [operation responseObject] options: NSJSONReadingMutableContainers error: &error];
   
   [response setValue:SCAN_SUCCESS forKey:SCAN_STATUS];     // 1 = success, 0 = error
+     
+  NSLog(@"Nutritionix API - successful response:  %@", response);
   
-  if(!error)
-  {
-   response = [[NSMutableDictionary alloc] init];
-   
-   [response setValue:SCAN_ERROR forKey:SCAN_STATUS];      // 1 = success, 0 = error
 
-   NSLog(@"Nutritionix API - successful response:  %@", response);
-  }
+//  if(!error)
+//  {
+//   response = [[NSMutableDictionary alloc] init];
+//   
+//   [response setValue:SCAN_ERROR forKey:SCAN_STATUS];      // 1 = success, 0 = error
+//
+//   NSLog(@"Nutritionix API - successful response:  %@", response);
+//  }
  }
  else
  {
@@ -171,7 +179,12 @@ NSString *appKey;
 {
  if(!infoDict)
  {
-  infoDict = [[NSBundle mainBundle] infoDictionary];
+     
+  NSString *plistFilePath  = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"Nutrionix_iOS_Library.plist"];
+     
+   infoDict=[NSDictionary dictionaryWithContentsOfFile:plistFilePath];
+     
+ // infoDict = [[NSBundle mainBundle] infoDictionary];
  }
  
  return [infoDict objectForKey:key];

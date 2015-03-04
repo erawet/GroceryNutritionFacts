@@ -9,8 +9,8 @@
 	<key>Nutritionix API Url</key>
 	<string>https://api.nutritionix.com/v1_1/</string>
 	<key>Nutritionix App Id</key>
-	<string>your_appid_here</string>
+	<string>f028f8a9</string>
 	<key>Nutritionix App Key</key>
-	<string>your_key_here</string>
+	<string>2aa3705c7b61c9810518c37d3332710c</string>
 </dict>
 </plist>
