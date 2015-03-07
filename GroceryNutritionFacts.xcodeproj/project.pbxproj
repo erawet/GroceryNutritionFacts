@@ -51,6 +51,8 @@
 		039DE9721AA445AD00D0D0C2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DE9711AA445AD00D0D0C2 /* SettingsViewController.m */; };
 		03CE84641AA54F3100DE7330 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE84631AA54F3100DE7330 /* Utility.m */; };
 		03CE846A1AA54FA400DE7330 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE84691AA54FA400DE7330 /* Constants.m */; };
+		03D033481AA9659300CCFE3B /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D033471AA9659300CCFE3B /* BooksViewController.m */; };
+		03D033511AAA961800CCFE3B /* BooksCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D033501AAA961800CCFE3B /* BooksCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,10 @@
 		03CE84631AA54F3100DE7330 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		03CE84681AA54FA400DE7330 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
 		03CE84691AA54FA400DE7330 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = ../Constants.m; sourceTree = "<group>"; };
+		03D033461AA9659300CCFE3B /* BooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BooksViewController.h; path = ../BooksViewController.h; sourceTree = "<group>"; };
+		03D033471AA9659300CCFE3B /* BooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BooksViewController.m; path = ../BooksViewController.m; sourceTree = "<group>"; };
+		03D0334F1AAA961800CCFE3B /* BooksCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksCollectionViewCell.h; sourceTree = "<group>"; };
+		03D033501AAA961800CCFE3B /* BooksCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,10 @@
 				03072B681AA17FE6008D24AD /* ResultViewController.m */,
 				039DE9701AA445AD00D0D0C2 /* SettingsViewController.h */,
 				039DE9711AA445AD00D0D0C2 /* SettingsViewController.m */,
+				03D033461AA9659300CCFE3B /* BooksViewController.h */,
+				03D033471AA9659300CCFE3B /* BooksViewController.m */,
+				03D0334F1AAA961800CCFE3B /* BooksCollectionViewCell.h */,
+				03D033501AAA961800CCFE3B /* BooksCollectionViewCell.m */,
 				03CE84681AA54FA400DE7330 /* Constants.h */,
 				03CE84691AA54FA400DE7330 /* Constants.m */,
 				03CE84621AA54F3100DE7330 /* Utility.h */,
@@ -490,6 +500,7 @@
 				039DE9601AA37A0600D0D0C2 /* AFURLConnectionOperation.m in Sources */,
 				039DE9641AA37A0600D0D0C2 /* LibConstants.m in Sources */,
 				037F47811A9311B200FADFE9 /* ScannerViewController.m in Sources */,
+				03D033481AA9659300CCFE3B /* BooksViewController.m in Sources */,
 				039DE9661AA37A0600D0D0C2 /* Nutritionix_iOS_Library.m in Sources */,
 				03072B691AA17FE6008D24AD /* ResultViewController.m in Sources */,
 				03CE846A1AA54FA400DE7330 /* Constants.m in Sources */,
@@ -502,6 +513,7 @@
 				039DE9721AA445AD00D0D0C2 /* SettingsViewController.m in Sources */,
 				03CE84641AA54F3100DE7330 /* Utility.m in Sources */,
 				039DE9631AA37A0600D0D0C2 /* AFURLSessionManager.m in Sources */,
+				03D033511AAA961800CCFE3B /* BooksCollectionViewCell.m in Sources */,
 				037F477E1A93104000FADFE9 /* HomeViewController.m in Sources */,
 				037F47481A92D1A300FADFE9 /* main.m in Sources */,
 				039DE95D1AA37A0600D0D0C2 /* AFHTTPSessionManager.m in Sources */,
