@@ -10,4 +10,7 @@
 
 @interface BooksViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property NSDictionary *bookArrayDict;
+@property NSMutableArray *bookArray;
+
 @end

@@ -8,6 +8,9 @@
 
 #import "SettingsViewController.h"
 #import <Parse/Parse.h>
+#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import "UIView+MJAlertView.h"
 
 @interface SettingsViewController ()
 
@@ -28,6 +31,39 @@
     
     [PFUser logOut];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)onChangePasswordPress:(id)sender {
+    
+}
+
+- (IBAction)onFeedbackPress:(id)sender {
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController* mail = [MFMailComposeViewController new];
+        mail.mailComposeDelegate = self;
+        [mail setToRecipients:@[@"erawet@gmail.com"]];
+        [mail setSubject:@"Nutrition Facts Feedback"];
+        [mail setMessageBody:[self feedbackFooterText] isHTML:NO];
+        [self presentViewController:mail animated:YES completion:nil];
+        return;
+    }
+    
+    
+//    [[[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"No email accounts on device.", nil) delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", nil), nil] show];
+    
+    [UIView addMJNotifierWithText:@"No email accounts on device." dismissAutomatically:YES];
+    
+}
+
+-(NSString*) feedbackFooterText {
+    NSMutableString* mutable = [NSMutableString string];
+    [mutable appendString:@"\n\n\n ---- Log Information ----\n"];
+    
+    UIDevice* device = [UIDevice currentDevice];
+   // [mutable appendFormat:@"Device Model: %@\n", device.machineName];
+    [mutable appendFormat:@"iOS Version: %@ %@\n", device.systemName, device.systemVersion];
+    
+    
+    return mutable;
 }
 
 

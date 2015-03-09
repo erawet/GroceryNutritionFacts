@@ -8,6 +8,7 @@
 
 #import "ResultViewController.h"
 #import "Utility.h"
+#import "UIView+MJAlertView.h"
 
 //Daily Values
 //Daily Value for iron is 14 mg
@@ -133,7 +134,7 @@
     
 }
 - (IBAction)onAddItemPress:(id)sender {
-    
+     [UIView addMJNotifierWithText:@"Feature available in PRO($2.99) Version" dismissAutomatically:YES ];
 }
 
 

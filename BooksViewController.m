@@ -8,11 +8,12 @@
 
 #import "BooksViewController.h"
 #import "BooksCollectionViewCell.h"
+#import "UIView+MJAlertView.h"
 
 @interface BooksViewController ()
 
-@property NSMutableArray *bookArray;
-@property NSDictionary *bookArrayDict;
+
+
 @property (strong, nonatomic) IBOutlet UICollectionView *bookCollectionView;
 
 
@@ -29,9 +30,10 @@
     [[self bookCollectionView]setDataSource:self];
     [[self bookCollectionView]setDelegate:self];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
     
+     NSLog(@"Books %@", self.bookArray);
+     [self.bookCollectionView reloadData];
+ /*
     NSURL *url=[NSURL URLWithString:@"http://api.walmartlabs.com/v1/search?query=nutrition+books&format=json&apiKey=5bgvmzuvq3jxzgemg9dv6dkh"];
     NSURLRequest *request=[NSURLRequest requestWithURL:url];
     
@@ -54,7 +56,7 @@
                                [self.bookCollectionView reloadData];
                            }];
     
-
+*/
     
     
     // Do any additional setup after loading the view.
@@ -100,6 +102,12 @@
     
     // Configure the cell
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [UIView addMJNotifierWithText:@"Feature available in PRO($2.99) Version" dismissAutomatically:YES];
+    
 }
 
 @end

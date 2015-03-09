@@ -7,8 +7,12 @@
 //
 
 #import "HomeViewController.h"
+#import "UIView+MJAlertView.h"
+#import "BooksViewController.h"
 
 @interface HomeViewController ()
+
+@property NSMutableArray *bookArray;
 
 @end
 
@@ -16,24 +20,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-       // self.view.layer.borderColor = [UIColor redColor].CGColor;
-       // self.view.layer.borderWidth = 3.0f;
-    // Do any additional setup after loading the view.
+    
+    
+    NSURL *url=[NSURL URLWithString:@"http://api.walmartlabs.com/v1/search?query=nutrition+books&format=json&apiKey=5bgvmzuvq3jxzgemg9dv6dkh"];
+    NSURLRequest *request=[NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               
+                               
+                               NSDictionary *booksDict =[NSDictionary new];
+                               booksDict=[NSJSONSerialization JSONObjectWithData:data
+                                                                         options:NSJSONReadingAllowFragments
+                                                                           error:&connectionError];
+                               
+                               self.bookArray=[NSMutableArray array];
+                               self.bookArray = [booksDict objectForKey:@"items"];
+                               
+                               NSLog(@"Books %@", self.bookArray);
+                           }];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+}
+- (IBAction)onHistoryPress:(id)sender {
+    [UIView addMJNotifierWithText:@"Feature available in PRO($2.99) Version" dismissAutomatically:YES ];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onRecipesPress:(id)sender {
+    [UIView addMJNotifierWithText:@"Feature available in PRO($2.99) Version" dismissAutomatically:YES ];
 }
-*/
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"goToBooks"]) {
+        BooksViewController *bVC=[segue destinationViewController];
+        bVC.bookArray=self.bookArray;
+    }
+    
+    
+}
 
 @end

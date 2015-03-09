@@ -73,6 +73,9 @@
                                         <include reference="yvj-JG-sOh"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onHistoryPress:" destination="9pv-A4-QxB" eventType="touchUpInside" id="xb0-rZ-JUb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Lb-Jki">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -124,6 +127,9 @@
                                         <include reference="kkg-Dx-whJ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onRecipesPress:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hH7-K0-LCZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uF3-IU-g53">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -149,7 +155,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="vuw-Pa-RKb" kind="show" id="qYq-U6-4Hf"/>
+                                    <segue destination="vuw-Pa-RKb" kind="show" identifier="goToBooks" id="qYq-U6-4Hf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition Books" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pra-09-ar2">
@@ -383,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2052" y="-706"/>
+            <point key="canvasLocation" x="1905" y="-760"/>
         </scene>
         <!--Books View Controller-->
         <scene sceneID="QuQ-d4-KBc">
@@ -394,6 +400,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Fnw-mn-auM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nzc-bn-RkU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pld-el-xe9">
@@ -562,24 +569,140 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6W-tV-IQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="-554"/>
+            <point key="canvasLocation" x="2667" y="-261"/>
         </scene>
-        <!--View Controller-->
+        <!--Notes View Controller-->
         <scene sceneID="r8D-p8-IPM">
             <objects>
-                <viewController id="E77-Gy-kA4" sceneMemberID="viewController">
+                <viewController id="E77-Gy-kA4" customClass="NotesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KlO-nE-N25"/>
                         <viewControllerLayoutGuide type="bottom" id="Yqi-gt-PSq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="US1-eb-jil">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2A-he-qqa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4KR-CI-jGB"/>
+                                    <constraint firstAttribute="width" constant="400" id="bdi-Yb-ydg"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.039215686274509803" green="0.36862745098039218" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="My Quick Notes" id="i9Z-DT-dAX">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4zs-UT-1lT">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onCancelPress:" destination="E77-Gy-kA4" id="MNg-bf-2rJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aTP-HZ-vM4">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onAddPress:" destination="E77-Gy-kA4" id="1fH-Rv-5CX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4KR-CI-jGB"/>
+                                        <exclude reference="bdi-Yb-ydg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4KR-CI-jGB"/>
+                                        <include reference="bdi-Yb-ydg"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T3C-Dp-BBt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Gp9-Mi-OzI"/>
+                                    <constraint firstAttribute="height" constant="570" id="r5l-GU-DcG"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Zxa-b5-18g">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zxa-b5-18g" id="oTI-aa-gh4">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Gp9-Mi-OzI"/>
+                                        <exclude reference="r5l-GU-DcG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Gp9-Mi-OzI"/>
+                                        <include reference="r5l-GU-DcG"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="E77-Gy-kA4" id="Hfb-vP-J0a"/>
+                                    <outlet property="delegate" destination="E77-Gy-kA4" id="i9t-Tq-Myw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.035294117647058823" green="0.45098039215686275" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="T3C-Dp-BBt" secondAttribute="trailing" constant="-16" id="0hu-zr-aqh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p2A-he-qqa" secondAttribute="trailing" constant="-16" id="67d-SY-W9P"/>
+                            <constraint firstItem="p2A-he-qqa" firstAttribute="leading" secondItem="US1-eb-jil" secondAttribute="leadingMargin" constant="-16" id="IC6-on-sFR"/>
+                            <constraint firstItem="T3C-Dp-BBt" firstAttribute="top" secondItem="p2A-he-qqa" secondAttribute="bottom" id="JFL-q0-KCc"/>
+                            <constraint firstItem="T3C-Dp-BBt" firstAttribute="leading" secondItem="US1-eb-jil" secondAttribute="leadingMargin" constant="-16" id="hzQ-pg-42E"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="T3C-Dp-BBt" secondAttribute="bottom" constant="-34" id="jez-cX-WQl"/>
+                            <constraint firstItem="p2A-he-qqa" firstAttribute="top" secondItem="KlO-nE-N25" secondAttribute="bottom" id="uAY-m3-Igf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="p2A-he-qqa"/>
+                                <exclude reference="T3C-Dp-BBt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="67d-SY-W9P"/>
+                                <exclude reference="IC6-on-sFR"/>
+                                <exclude reference="uAY-m3-Igf"/>
+                                <exclude reference="0hu-zr-aqh"/>
+                                <exclude reference="JFL-q0-KCc"/>
+                                <exclude reference="hzQ-pg-42E"/>
+                                <exclude reference="jez-cX-WQl"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="p2A-he-qqa"/>
+                                <include reference="T3C-Dp-BBt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="67d-SY-W9P"/>
+                                <include reference="IC6-on-sFR"/>
+                                <include reference="uAY-m3-Igf"/>
+                                <include reference="0hu-zr-aqh"/>
+                                <include reference="JFL-q0-KCc"/>
+                                <include reference="hzQ-pg-42E"/>
+                                <include reference="jez-cX-WQl"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="T3C-Dp-BBt" id="PYD-Ft-cSs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Utp-19-9ct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3448.5" y="-839"/>
+            <point key="canvasLocation" x="2677.5" y="-986"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Vu0-cj-q6t">
@@ -2969,7 +3092,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaP-VM-pBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2772" y="288"/>
+            <point key="canvasLocation" x="2718" y="401"/>
         </scene>
         <!--My List-->
         <scene sceneID="wg7-f3-ORb">
@@ -3838,6 +3961,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="onChangePasswordPress:" destination="d51-aJ-6UK" eventType="touchUpInside" id="8SM-cm-k3Y"/>
                                     <segue destination="GmX-eb-9Lf" kind="show" id="enB-YR-aUO"/>
                                 </connections>
                             </button>
@@ -3848,7 +3972,7 @@
                                     <constraint firstAttribute="width" constant="200" id="eey-ec-h0A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Send Feed Back">
+                                <state key="normal" title="Send Feedback">
                                     <color key="titleColor" red="0.96862745100000003" green="0.58039215690000001" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3864,6 +3988,9 @@
                                         <include reference="eey-ec-h0A"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onFeedbackPress:" destination="d51-aJ-6UK" eventType="touchUpInside" id="dTo-nw-i55"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as4-dx-vGI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -4413,10 +4540,10 @@
             </objects>
             <point key="canvasLocation" x="2004" y="77"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Change Password View Controller-->
         <scene sceneID="fEJ-fY-WBc">
             <objects>
-                <viewController id="GmX-eb-9Lf" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController id="GmX-eb-9Lf" customClass="ChangePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="07O-d6-fNq"/>
                         <viewControllerLayoutGuide type="bottom" id="Yyq-Jf-0hl"/>
@@ -4442,7 +4569,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1Xz-1F-WET">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="onCancelPress:" destination="GmX-eb-9Lf" id="wfF-EL-eNO"/>
+                                                <action selector="onCancelPress:" destination="GmX-eb-9Lf" id="WIw-42-00w"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -4504,6 +4631,7 @@
                                     <rect key="frame" x="42" y="315" width="315" height="44"/>
                                 </variation>
                                 <connections>
+                                    <action selector="onChangePress:" destination="GmX-eb-9Lf" eventType="touchUpInside" id="3wZ-5P-VGv"/>
                                     <action selector="onSignupPress:" destination="GmX-eb-9Lf" eventType="touchUpInside" id="2F3-ru-FjW"/>
                                 </connections>
                             </button>
@@ -4631,7 +4759,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGl-by-TnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="f1I-bc-WrX"/>
             </objects>
-            <point key="canvasLocation" x="2299.5" y="936"/>
+            <point key="canvasLocation" x="2016" y="922"/>
         </scene>
     </scenes>
     <resources>
